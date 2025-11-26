@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Memory Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg glass-navbar">
+        <div class="container">
+            <span class="navbar-brand glass-brand"> Captured by Zaji</span>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+
+        <div class="row g-4 mb-5" id="galleryGrid">
+
+        </div>
+
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-12">
+                <div class="glass-morphism rounded-3 py-3 text-center">
+                    <h5 class="fw-bold text-white mb-2">All 15 Memories Preserved</h5>
+                    <p class="text-light">Each photo tells a unique story</p>
+                </div>
+            </div>
+        </div>
+
+    </div> 
+
+    <script>
+
+const memories = [
+    {
+        id: 1,
+        src: "./images/pic1.jpg",
+        alt: "Kurt's 18th Birthday",
+        title: "Kurt's 18th Birthday",
+        date: "Jan 2025",
+        description: "In the hush of the night, the wheel keeps turning — holding quiet dreams in each rising light.",
+    },
+    {
+        id: 2,
+        src: "./images/pic2.jpg",
+        alt: "Catching up with friends",
+        title: "Catching up with friends",
+        date: "May 2025",
+        description: "Even heavy skies learn softness — a single ribbon of color proves it.",
+    },
+    {
+        id: 3,
+        src: "./images/pic3.jpg",
+        alt: "Night jog",
+        title: "Night jog",
+        date: "Aug 2025",
+        description: "Where the city glows, gentle steps meet quiet moments — and the night feels kinder than expected.",
+    },
+    {
+        id: 4,
+        src: "./images/pic4.jpg",
+        alt: "My Fave Flower",
+        title: "My Fave Flower",
+        date: "Jun 2025",
+        description: "Inside the smallest glow, a whole meadow blooms — a reminder that wonder fits even in silence.",
+    },
+    {
+        id: 5,
+        src: "./images/pic5.jpg",
+        alt: "Just at PUP’s 4th floor, not the moon",
+        title: "Just at PUP’s 4th floor, not the moon",
+        date: "Oct 2025",
+        description: "Some journeys begin with nothing but steady feet and the courage to move anyway.",
+    },
+    {
+        id: 6,
+        src: "./images/pic6.jpg",
+        alt: "Night Walk",
+        title: "Night Walk",
+        date: "Mar 2025",
+        description: "The empty road waits without rush — a promise that direction returns, even in darkness.",
+    },
+    {
+        id: 7,
+        src: "./images/pic7.jpg",
+        alt: "Cuties who bring back my photographer side.",
+        title: "Cuties who bring back my photographer side.",
+        date: "Jan 2025",
+        description: "From a quiet balcony, laughter drifts like sunlight — a small proof that joy can find us anywhere.",
+    },
+    {
+        id: 8,
+        src: "./images/pic8.jpg",
+        alt: "Angelica in the Hallway",
+        title: "Angelica in the Hallway",
+        date: "Jan 2025",
+        description: "In the stillness of the hallway, she moves unshaken — a quiet fire walking forward without needing permission.",
+    },
+    {
+        id: 9,
+        src: "./images/pic9.jpg",
+        alt: "Sabay-sabay tayong aangat, mga day ones",
+        title: "Sabay-sabay tayong aangat, mga day ones",
+        date: "Jan 2025",
+        description: "Step after step, we rise together — for on this path, every stride matters and no one walks alone",
+    },
+    {
+        id: 10,
+        src: "./images/pic10.jpg",
+        alt: "Bond with Dad",
+        title: "Bond with Dad",
+        date: "2024",
+        description: "Even metal reaches for the sky — a silver curve teaching us how art turns stillness into wonder.",
+    },
+    {
+        id: 11,
+        src: "./images/pic11.jpg",
+        alt: "JILCW 47th Anniversary ",
+        title: "JILCW 47th Anniversary",
+        date: "Oct 2025",
+        description: "Under the rising lights, the world feels louder — yet somehow our hearts find the same rhythm.",
+    },
+    {
+        id: 12,
+        src: "./images/pic12.jpg",
+        alt: "Never-ending hellos and goodbyes, Mindoro",
+        title: "Never-ending hellos and goodbyes, Mindoro",
+        date: "Apr 2025",
+        description: "Beyond the glass, new places pass in quiet mystery — a tender reminder that sometimes being unknown is its own adventure.",
+    },
+    {
+        id: 13,
+        src: "./images/pic13.jpg",
+        alt: "Jog with Ninang",
+        title: "Jog with Ninang",
+        date: "Feb 2025",
+        description: "Through quiet branches, the skyline softens — a gentle reminder that stillness can exist even in the busiest places",
+    },
+    {
+        id: 14,
+        src: "./images/pic14.jpg",
+        alt: "Fam Bond",
+        title: "Fam Bond",
+        date: "Oct 2024",
+        description: "At a fading corner of the day, the world slows down — showing that calm can be found even where footsteps never stop..",
+    },
+    {
+        id: 15,
+        src: "./images/pic15.jpg",
+        alt: "Sponty Beach Trip",
+        title: "Sponty Beach Trip",
+        date: "July 2025",
+        description: "By the open shore, the horizon stretches endlessly — proving that some beginnings arrive quietly, carried by the tide.",
+    },
+];
+
+
+    </script>
+
+    <script>
+        var galleryGrid = document.getElementById("galleryGrid");
+
+        for (var i = 0; i < memories.length; i++) {
+            galleryGrid.innerHTML += `
+      <div class="col gallery-item">
+        <div class="gallery-card" data-index="${i}">
+          <img src="${memories[i].src}" alt="${memories[i].alt}" loading="lazy">
+          <div class="overlay">
+            <div class="overlay-header">
+              <span class="overlay-date">${memories[i].date}</span>
+            </div>
+            <div class="overlay-content">
+              <h5>${memories[i].title}</h5>
+              <p>${memories[i].description}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="details-box" id="details-${i}" style="display:none;">
+          <p>${memories[i].description}</p>
+          <div class="details-date">📅 ${memories[i].date}</div>
+        </div>
+      </div>
+    `;
+        }
+
+        document.addEventListener("click", function (e) {
+            if (e.target.closest(".gallery-card")) {
+                let index = e.target.closest(".gallery-card").getAttribute("data-index");
+                let detailsBox = document.getElementById("details-" + index);
+
+                document.querySelectorAll(".details-box").forEach((box) => {
+                    if (box.id !== "details-" + index) {
+                        box.style.display = "none";
+                    }
+                });
+
+                detailsBox.style.display =
+                    detailsBox.style.display === "none" ? "block" : "none";
+            }
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

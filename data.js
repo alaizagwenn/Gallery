@@ -1,0 +1,20 @@
+var gallery = [
+    { place: "Shot 1", description: "Your poem or picture description here.", picture: "pic1.jpg" },
+    { place: "Shot 2", description: "Your poem or picture description here.", picture: "pic2.jpg" },
+    { place: "Shot 3", description: "Your poem or picture description here.", picture: "pic3.jpg" },
+    { place: "Shot 4", description: "Your poem or picture description here.", picture: "pic4.jpg" },
+    { place: "Shot 5", description: "Your poem or picture description here.", picture: "pic5.jpg" },
+    { place: "Shot 6", description: "Your poem or picture description here.", picture: "pic6.jpg" },
+    { place: "Shot 7", description: "Your poem or picture description here.", picture: "pic7.jpg" },
+    { place: "Shot 8", description: "Your poem or picture description here.", picture: "pic8.jpg" },
+    { place: "Shot 9", description: "Your poem or picture description here.", picture: "pic9.jpg" },
+    { place: "Shot 10", description: "Your poem or picture description here.", picture: "pic10.jpg" },
+    { place: "Shot 11", description: "Your poem or picture description here.", picture: "pic11.jpg" },
+    { place: "Shot 12", description: "Your poem or picture description here.", picture: "pic12.jpg" },
+    { place: "Shot 13", description: "Your poem or picture description here.", picture: "pic13.jpg" },
+    { place: "Shot 14", description: "Your poem or picture description here.", picture: "pic14.jpg" },
+    { place: "Shot 15", description: "Your poem or picture description here.", picture: "pic15.jpg" },
+    { place: "Shot 16", description: "Your poem or picture description here.", picture: "pic16.jpg" },
+    { place: "Shot 17", description: "Your poem or picture description here.", picture: "pic17.jpg" },
+    { place: "Shot 18", description: "Your poem or picture description here.", picture: "pic18.jpg" }
+];
